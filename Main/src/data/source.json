@@ -2,12 +2,12 @@
   {
     "id": 1,
     "title": "Counter App",
-    "img": "./images/2f753bc2-bc9b-4300-a1e3-04fbd5cacd8d.png",
-    "para": "Ek simple counter jisme increment, decrement aur reset ka logic useState hook se banaya gaya hai.",
+    "img": "./images/counter-react-app.png",
+    "para": "Ek simple counter jisme increment, decrement aur reset ka logic useState hook se banaya gaya hai. Make it more better by using LocalStorage",
     "difficulty": "easy",
-    "tags": ["React", "useState", "JSX"],
-    "liveLink": "https://username.github.io/100-react-mini-projects/counter-app",
-    "githubLink": "https://github.com/username/100-react-mini-projects/tree/main/01-counter-app"
+    "tags": ["React", "useState", "useRef"],
+    "liveLink": "https://100-min-project-counter-app.vercel.app/",
+    "githubLink": "https://github.com/codewithbk/100-react-mini-projects/tree/main/02-Counter%20App"
   },
   {
     "id": 2,
