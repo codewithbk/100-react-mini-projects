@@ -1,0 +1,186 @@
+.footer {
+    width: 100%;
+    margin-top: 80px;
+
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-color);
+
+    color: var(--text-primary);
+}
+
+
+/* ==============================
+   Main Footer
+============================== */
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 45px 20px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+/* ==============================
+   Brand
+============================== */
+
+.footerBrand {
+    max-width: 430px;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footerLogo svg {
+    font-size: 28px;
+    color: var(--accent-color);
+}
+
+.footerBrand p {
+    margin: 12px 0 0;
+
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   Links
+============================== */
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footerLinks a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+    color: var(--accent-color);
+}
+
+.footerLinks svg {
+    font-size: 17px;
+}
+
+
+/* ==============================
+   Back To Top
+============================== */
+
+.backToTop {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+
+    background-color: var(--card-bg);
+    color: var(--accent-color);
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: all 0.2s ease;
+}
+
+.backToTop:hover {
+    color: white;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   Bottom
+============================== */
+
+.footerBottom {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 18px 20px;
+
+    border-top: 1px solid var(--border-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.madeWith {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.madeWith svg {
+    color: var(--accent-color);
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 700px) {
+
+    .footerContent {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .footerLinks {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .backToTop {
+        align-self: flex-end;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+}

@@ -1,0 +1,292 @@
+/* ==========================================
+   LIGHT MODE (default) — :root pe define hota hai
+   Ye colors tab tak active rahenge jab tak .dark class na lage
+========================================== */
+:root {
+  /* ---- Backgrounds ---- */
+  --bg-color: #f9fafb;
+  /* pura page ka background - halka off-white */
+  --navbar-bg: #ffffff;
+  /* navbar ka background - pure white, thoda alag dikhne ke liye */
+  --card-bg: #ffffff;
+  /* project cards ka background */
+  --footer-bg: #f1f1f1;
+  /* footer ka background - thoda grayish */
+
+  /* ---- Text ---- */
+  --text-primary: #111827;
+  /* main heading/text - dark gray-black, pure black se soft */
+  --text-secondary: #6b7280;
+  /* description/subtext - halka gray */
+  --text-muted: #9ca3af;
+  /* placeholder ya extra light text */
+
+  /* ---- Borders ---- */
+  --border-color: #e5e7eb;
+  /* cards, input, navbar ke liye halki border */
+
+  /* ---- Accent (brand color - buttons, links, highlights) ---- */
+  --accent-color: #2563eb;
+  /* primary blue - buttons, active links */
+  --accent-hover: #1d4ed8;
+  /* thoda dark blue - hover state ke liye */
+  --accent-git-repo-btn: #2563eb;
+  /* GitHub repo button ke liye white text dark bg pe */
+
+  /* ---- Search Input ---- */
+  --search-bg: #ffffff;
+  /* search input ka background - light mode me white */
+  --search-border: #e5e7eb;
+  /* border - halki gray */
+  --search-focus-ring: rgba(37, 99, 235, 0.15);
+  /* focus hote waqt blue glow (halka) */
+  --search-placeholder: #9ca3af;
+  /* placeholder text ka color - gray */
+  --search-text: #111827;
+  /* jo user type karega uska text color - dark */
+
+
+
+  /* ---- Shadow ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* halka shadow - navbar ke liye */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  /* card ka normal shadow */
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* card hover pe uthega wala shadow */
+
+  /* ---- Border Radius (consistency ke liye reusable) ---- */
+  --radius-sm: 6px;
+  /* chhote elements - badge, tag */
+  --radius-md: 10px;
+  /* buttons, input fields */
+  --radius-lg: 16px;
+  /* cards, bade containers */
+
+
+  --card-bg: #ffffff;
+  /* card ka background - light mode me white */
+  --card-border: #e5e7eb;
+  /* card ki border - halki gray */
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  /* normal shadow */
+  --card-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* hover pe uthega wala shadow */
+  --card-title: #111827;
+  /* project name ka color - dark text */
+  --card-desc: #6b7280;
+  /* description text - muted gray */
+  --card-icon-bg: #eff6ff;
+  /* icon ke peeche wala chhota box - halka blue tint */
+  --card-icon-color: #2563eb;
+  /* icon ka color - accent blue */
+  --card-link: #2563eb;
+  /* "Live Demo" / "Code" link ka color */
+  --card-link-hover: #1d4ed8;
+  /* link hover pe thoda dark blue */
+
+
+  /* ---- Easy chip ---- */
+  --easy-color: #16a34a;
+  /* text color - green */
+  --easy-bg: #dcfce7;
+  /* background - halka green */
+  --easy-border: #bbf7d0;
+  /* border - matching light green */
+  --easy-shadow: 0 1px 3px rgb(2, 237, 88);
+  /* halka green-tinted shadow */
+
+  /* ---- Medium chip ---- */
+  --medium-color: #d97706;
+  /* text color - amber/orange */
+  --medium-bg: #fef3c7;
+  /* background - halka amber */
+  --medium-border: #fde68a;
+  /* border - matching light amber */
+  --medium-shadow: 0 1px 3px rgba(255, 136, 0, 0.959);
+  /* halka amber-tinted shadow */
+
+  /* ---- Hard chip ---- */
+  --hard-color: #dc2626;
+  /* text color - red */
+  --hard-bg: #fee2e2;
+  /* background - halka red */
+  --hard-border: #fecaca;
+  /* border - matching light red */
+  --hard-shadow: 0 1px 3px rgba(255, 0, 0, 0.9);
+  /* halka red-tinted shadow */
+
+  /* ---- Common chip shape (sabke liye same) ---- */
+  --chip-radius: 999px;
+  /* full pill shape */
+  --chip-padding: 4px 10px;
+  /* andar ka spacing */
+  --chip-font-size: 12px;
+  --chip-font-weight: 600;
+
+  --tag-bg: #eff6ff;
+  /* bahut halka blue background */
+  --tag-text: #2563eb;
+  /* blue text - accent color jaisa */
+  --tag-border: #bfdbfe;
+  /* halki blue border */
+  --tag-shadow: none;
+
+
+  --highlight-bg: #fef08a;
+  /* halka yellow background */
+  --highlight-text: #713f12;
+
+
+  --filter-bg: #ffffff;
+  /* background */
+  --filter-text: #1f2937;
+  /* text color */
+  --filter-border: #d1d5db;
+  /* border color */
+
+  --filter-btn-hover: #eff6ff;
+}
+
+/* ==========================================
+   DARK MODE — .dark class body/html pe lagne par ye override hoga
+   Naam same rakhe hain :root jaise, sirf values change hui hain
+========================================== */
+.dark {
+  /* ---- Backgrounds ---- */
+  --bg-color: #0f172a;
+  /* dark navy-black - pure black se aankhon ko aasan */
+  --navbar-bg: #111827;
+  /* navbar thoda alag shade - depth dikhane ke liye */
+  --card-bg: #1e293b;
+  /* cards ka dark background */
+  --footer-bg: #0b1120;
+  /* footer sabse dark */
+
+  /* ---- Text ---- */
+  --text-primary: #f1f5f9;
+  /* main text - off-white, pure white se soft */
+  --text-secondary: #94a3b8;
+  /* description text - muted gray-blue */
+  --text-muted: #64748b;
+  /* extra light/placeholder text */
+
+  /* ---- Borders ---- */
+  --border-color: #334155;
+  /* dark mode me border thoda visible honi chahiye */
+
+  /* ---- Accent ---- */
+  --accent-color: #3b82f6;
+  /* thoda bright blue - dark bg pe pop karega */
+  --accent-hover: #60a5fa;
+  /* hover pe aur bright */
+  --accent-git-repo-btn: #ffffff;
+  /* GitHub repo button ke liye white text dark bg pe */
+
+  /* ---- Easy chip ---- */
+  --easy-color: #16a34a;
+  /* text color - green */
+  --easy-bg: #dcfce7;
+  /* background - halka green */
+  --easy-border: #bbf7d0;
+  /* border - matching light green */
+  --easy-shadow: 0 1px 3px rgba(22, 163, 74, 0.15);
+  /* halka green-tinted shadow */
+
+  /* ---- Medium chip ---- */
+  --medium-color: #d97706;
+  /* text color - amber/orange */
+  --medium-bg: #fef3c7;
+  /* background - halka amber */
+  --medium-border: #fde68a;
+  /* border - matching light amber */
+  --medium-shadow: 0 1px 3px rgba(217, 119, 6, 0.15);
+  /* halka amber-tinted shadow */
+
+
+  /* ---- Easy chip ---- */
+  --easy-color: #4ade80;
+  /* bright green - dark bg pe pop karega */
+  --easy-bg: #14532d;
+  /* dark green background */
+  --easy-border: #166534;
+  /* thodi visible dark green border */
+  --easy-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  /* dark mode me plain dark shadow behtar dikhta hai */
+
+  /* ---- Medium chip ---- */
+  --medium-color: #fbbf24;
+  /* bright amber */
+  --medium-bg: #78350f;
+  /* dark amber background */
+  --medium-border: #92400e;
+  /* dark amber border */
+  --medium-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+  /* ---- Hard chip ---- */
+  --hard-color: #f87171;
+  /* bright red */
+  --hard-bg: #7f1d1d;
+  /* dark red background */
+  --hard-border: #991b1b;
+  /* dark red border */
+  --hard-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+
+  /* ------- Search Input ---- */
+  --search-bg: #1e293b;
+  /* search input ka background - dark mode me dark slate */
+  --search-border: #334155;
+  /* border - dark mode me thodi visible gray */
+  --search-focus-ring: rgba(59, 130, 246, 0.25);
+  /* focus glow - thoda bright kyunki dark bg pe zyada visible chahiye */
+  --search-placeholder: #64748b;
+  /* placeholder - muted lekin dark bg pe readable */
+  --search-text: #f1f5f9;
+
+  /* ---- Shadow ---- */
+  /* dark mode me shadow halka dikhta hai, isliye white-based glow use karte hain taaki card upar se "float" kare */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+  /* Radius same rehta hai dono modes me - shape change nahi hoti, sirf color */
+
+  /* -------------- Cards ------- */
+  --card-bg: #1e293b;
+  /* card ka background - dark slate */
+  --card-border: #334155;
+  /* border - dark mode me thodi visible */
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  /* dark mode me shadow zyada dark hota hai kyunki bg khud dark hai */
+  --card-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.5);
+  /* hover shadow aur strong */
+  --card-title: #f1f5f9;
+  /* project name - off-white */
+  --card-desc: #94a3b8;
+  /* description - muted blue-gray */
+  --card-icon-bg: #1e3a5f;
+  /* icon box background - dark blue tint */
+  --card-icon-color: #60a5fa;
+  /* icon color - bright blue, dark bg pe pop karega */
+  --card-link: #60a5fa;
+  /* link color - bright blue */
+  --card-link-hover: #93c5fd;
+  /* link hover - aur zyada bright */
+
+  --tag-bg: #1e3a5f;
+  /* dark blue background */
+  --tag-text: #93c5fd;
+  /* bright light-blue text - dark bg pe readable */
+  --tag-border: #2563eb;
+  /* thodi visible blue border */
+  --tag-shadow: none;
+
+  --highlight-bg: #92400e;
+  /* dark amber background */
+  --highlight-text: #fef3c7;
+
+  --filter-bg: #1e293b;
+  --filter-text: #f1f5f9;
+  --filter-btn-hover: #1e3a5f;
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Counter App",
+    "img": "./images/2f753bc2-bc9b-4300-a1e3-04fbd5cacd8d.png",
+    "para": "Ek simple counter jisme increment, decrement aur reset ka logic useState hook se banaya gaya hai.",
+    "difficulty": "easy",
+    "tags": ["React", "useState", "JSX"],
+    "liveLink": "https://username.github.io/100-react-mini-projects/counter-app",
+    "githubLink": "https://github.com/username/100-react-mini-projects/tree/main/01-counter-app"
+  },
+  {
+    "id": 2,
+    "title": "Calculator App",
+    "img": "./images/e895c9f6-5cff-44fe-bbe2-aa8a20e8aff5.png",
+    "para": "Basic arithmetic calculator jisme addition, subtraction, multiplication aur division ke operations hain.",
+    "difficulty": "medium",
+    "tags": ["React", "useState", "JSX", "CSS Grid"],
+    "liveLink": "https://username.github.io/100-react-mini-projects/calculator-app",
+    "githubLink": "https://github.com/username/100-react-mini-projects/tree/main/02-calculator-app"
+  },
+  {
+    "id": 3,
+    "title": "Todo List App",
+    "img": "./images/2f753bc2-bc9b-4300-a1e3-04fbd5cacd8d.png",
+    "para": "Tasks add, complete aur delete karne wala todo app, jisme data Local Storage me persist hota hai.",
+    "difficulty": "medium",
+    "tags": ["React", "useState", "useEffect", "Local Storage", "CRUD"],
+    "liveLink": "https://username.github.io/100-react-mini-projects/todo-app",
+    "githubLink": "https://github.com/username/100-react-mini-projects/tree/main/03-todo-app"
+  },
+  {
+    "id": 4,
+    "title": "Weather App",
+    "img": "./images/146e8c62-b873-446c-95c5-984b317d6129.png",
+    "para": "Live weather data ek external API se fetch karke dikhaya gaya hai, city search ke saath.",
+    "difficulty": "hard",
+    "tags": ["React", "useState", "useEffect", "API", "Fetch"],
+    "liveLink": "https://username.github.io/100-react-mini-projects/weather-app",
+    "githubLink": "https://github.com/username/100-react-mini-projects/tree/main/04-weather-app"
+  },
+  {
+    "id": 5,
+    "title": "Stopwatch App",
+    "img": "./images/17d26762-7502-4eba-bf79-90a15743a50b.png",
+    "para": "Start, pause aur reset ke saath ek stopwatch, jisme useRef se interval ID store kiya gaya hai.",
+    "difficulty": "medium",
+    "tags": ["React", "useState", "useRef", "JSX"],
+    "liveLink": "https://username.github.io/100-react-mini-projects/stopwatch-app",
+    "githubLink": "https://github.com/username/100-react-mini-projects/tree/main/05-stopwatch-app"
+  }
+]
