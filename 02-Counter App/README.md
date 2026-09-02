@@ -5,7 +5,7 @@ This project allows users to increase, decrease, reset, and automatically increm
 
 ## 🚀 Live Demo
 
-[View Live App](YOUR_VERCEL_URL)
+[View Live App](https://100-min-project-counter-app.vercel.app/)
 
 ## ✨ Features
 
@@ -27,7 +27,8 @@ This project allows users to increase, decrease, reset, and automatically increm
 
 ## 📸 Screenshot
 
-![Counter App Screenshot](./screenshot.png)
+<img width="1442" height="810" alt="image" src="https://github.com/user-attachments/assets/5f9f78dc-3928-4df9-b9b2-f6bc7d2d09ec" />
+
 
 ## 📂 Project Structure
 
