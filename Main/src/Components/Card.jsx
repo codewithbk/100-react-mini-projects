@@ -4,8 +4,12 @@ import { FaBolt } from "react-icons/fa";       // Medium - thoda energy/effort
 import { FaFire } from "react-icons/fa";       // Hard - intense/tough feel
 import { FaGithub } from "react-icons/fa"
 import { FaRocket } from "react-icons/fa";
+import { useState } from 'react';
 
 const Card = ({ id, title, difficulty, tags, para, githublink, img, liveLink }) => {
+
+  const [loaded, setLoaded] = useState(false);
+
   return (
 
     <div className="cardsBody">
@@ -26,7 +30,8 @@ const Card = ({ id, title, difficulty, tags, para, githublink, img, liveLink }) 
 
       </div>
       <div className="topsection">
-        <img className='cardImg' src={img} alt="" />
+        {!loaded && <div className="skeleton" />}
+        <img className={`cardImg ${loaded ? "loaded" : ""}`} onLoad={() => setLoaded(true)} src={img} alt="" />
       </div>
       <div className="bottomSection">
         <div className="textEni">
