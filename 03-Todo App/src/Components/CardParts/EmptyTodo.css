@@ -1,0 +1,118 @@
+.emptyTodo {
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    color: var(--text-secondary);
+
+    animation: emptyTodoIn 0.35s ease;
+}
+
+.emptyTodoIcon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    font-size: 38px;
+
+    border-radius: 50%;
+
+    background: var(--primary-soft);
+
+    box-shadow: var(--shadow-sm);
+
+    animation: emptyFloat 2.5s ease-in-out infinite;
+}
+
+.emptyTodo h3 {
+    margin: 0 0 5px;
+
+    color: var(--text-primary);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.emptyTodo p {
+    max-width: 280px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes emptyTodoIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes emptyFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .emptyTodo {
+        min-height: 160px;
+        padding: 25px 15px;
+    }
+
+    .emptyTodoIcon {
+        width: 58px;
+        height: 58px;
+        font-size: 34px;
+    }
+
+    .emptyTodo h3 {
+        font-size: 17px;
+    }
+
+    .emptyTodo p {
+        font-size: 12px;
+    }
+}

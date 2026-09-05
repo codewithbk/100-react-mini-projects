@@ -1,0 +1,207 @@
+/* =========================
+   FILTER WRAPPER
+========================= */
+
+.filterBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: row;
+    gap: 14px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   FILTER BUTTONS WRAPPER
+========================= */
+
+.filtBtn {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    flex-direction: row;
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   FILTER BUTTON
+========================= */
+
+.filterBtn {
+    height: 30px;
+
+    padding: 0 18px;
+
+    border: 1px solid var(--filter-border);
+    border-radius: 14px;
+
+    background: var(--filter-bg);
+    color: var(--filter-text);
+
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+
+    cursor: pointer;
+    user-select: none;
+
+    box-shadow: var(--filter-shadow);
+
+    transition: all 0.25s ease;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.filterBtn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 16px rgba(30, 64, 175, 0.10);
+}
+
+
+/* =========================
+   ACTIVE FILTER
+========================= */
+
+.filterBtn.active {
+    background: var(--filter-active-bg);
+    color: var(--filter-active-text);
+
+    border-color: var(--filter-active-bg);
+
+    box-shadow: var(--filter-active-shadow);
+}
+
+
+/* =========================
+   CLEAR COMPLETED
+========================= */
+
+.clearCompleted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--clear-text);
+
+    font-size: 18px;
+    font-weight: 400;
+    font-family: inherit;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+.clearCompleted:hover {
+    opacity: 0.75;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+    .filterBtns {
+        gap: 10px;
+    }
+
+    .filtBtn {
+        gap: 7px;
+    }
+
+    .filterBtn {
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+    .clearCompleted {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .filterBtns {
+        gap: 8px;
+    }
+
+    .filtBtn {
+        gap: 6px;
+    }
+
+    .filterBtn {
+        height: 30px;
+
+        padding: 0 11px;
+
+        font-size: 12px;
+
+        border-radius: 12px;
+    }
+
+    .clearCompleted {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .filterBtns {
+        gap: 6px;
+    }
+
+    .filtBtn {
+        gap: 4px;
+    }
+
+    .filterBtn {
+        padding: 0 8px;
+        font-size: 11px;
+    }
+
+    .clearCompleted {
+        font-size: 14px;
+    }
+}

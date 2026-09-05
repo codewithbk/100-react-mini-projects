@@ -1,0 +1,678 @@
+/* =========================
+   MODAL OVERLAY
+========================= */
+
+.modalOverlay {
+    position: absolute;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 23, 42, 0.235);
+    backdrop-filter: blur(8px);
+
+    z-index: 1;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   MODAL CARD
+========================= */
+
+.addTodoCard {
+    width: min(92%, 480px);
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: var(--modal-bg);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid var(--modal-border);
+    border-radius: 22px;
+
+    box-shadow: var(--modal-shadow);
+
+    animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.modalIcon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--modal-icon-bg);
+    color: var(--modal-icon-color);
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 6px 14px rgba(59, 120, 246, 0.22);
+}
+
+.modalHeading {
+    flex: 1;
+    min-width: 0;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.modalHeading h2 {
+    margin: 0;
+
+    color: var(--modal-title);
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.modalHeading p {
+    margin: 0;
+
+    color: var(--modal-text);
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.modalClose {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid var(--modal-border);
+    border-radius: 8px;
+
+    background: var(--modal-input-bg);
+    color: var(--modal-muted);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.modalClose:hover {
+    color: var(--modal-title);
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FIELD
+========================= */
+
+.modalField {
+    margin-bottom: 18px;
+}
+
+.modalField label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--modal-title);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.modalInput {
+    height: 46px;
+
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    box-sizing: border-box;
+
+    background: var(--modal-input-bg);
+
+    border: 1px solid var(--modal-input-border);
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.modalInput:focus-within {
+    border-color: var(--input-focus-border);
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+.modalInput svg {
+    color: var(--modal-muted);
+    font-size: 13px;
+
+    flex-shrink: 0;
+}
+
+.modalInput input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--modal-input-text);
+
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.modalInput input::placeholder {
+    color: var(--modal-placeholder);
+}
+
+.disabled {
+    opacity: 0.7;
+    user-select: none;
+}
+
+
+/* =========================
+   CATEGORY SELECT
+========================= */
+
+.categoryOption.active {
+    background: var(--primary-soft-extra);
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.categoryOption.active:hover {
+    background: var(--primary-soft-extra);
+    color: #fff !important;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CATEGORY OPTIONS
+========================= */
+
+.categoryOptions {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.categoryOption {
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 0.5px solid var(--category-border);
+    border-radius: 8px;
+
+    background: var(--category-bg);
+    color: var(--category-text);
+
+    font-size: 11px;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    min-width: 0;
+}
+
+.categoryOption:hover {
+    transform: translateY(-1px);
+
+    background-color: var(--bg-primary);
+
+    border-color: var(--input-focus-border);
+
+    box-shadow: var(--modal-shadow);
+}
+
+
+/* =========================
+   CREATE CATEGORY
+========================= */
+
+.createCategoryBtn {
+    width: 100%;
+    height: 38px;
+
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 9px;
+
+    padding: 0 13px;
+
+    background: var(--create-category-bg);
+
+    border: 1px dashed var(--create-category-border);
+
+    border-radius: 9px;
+
+    color: var(--create-category-text);
+
+    font-size: 12px;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.createCategoryBtn:hover {
+    background: var(--category-bg);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.modalFooter {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 24px;
+}
+
+.skipBtn,
+.editBtn,
+.addTodoBtn {
+    height: 40px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    white-space: nowrap;
+}
+
+.skipBtn,
+.editBtn {
+    background: var(--modal-secondary-bg);
+
+    border: 1px solid var(--modal-secondary-border);
+
+    color: var(--modal-secondary-text);
+}
+
+.skipBtn:hover,
+.editBtn:hover {
+    transform: translateY(-1px);
+}
+
+.addTodoBtn {
+    padding: 0 20px;
+
+    background: var(--modal-primary-bg);
+
+    border: 1px solid var(--modal-primary-bg);
+
+    color: var(--modal-primary-text);
+
+    box-shadow:
+        0 6px 14px rgba(59, 120, 246, 0.20);
+}
+
+.addTodoBtn:hover {
+    background: var(--modal-primary-hover);
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+    .modalOverlay {
+        padding: 16px;
+    }
+
+    .addTodoCard {
+        width: min(94%, 460px);
+        padding: 22px;
+    }
+
+    .modalHeader {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .modalHeading h2 {
+        font-size: 20px;
+    }
+
+    .modalHeading p {
+        font-size: 12px;
+    }
+
+    .categoryOptions {
+        gap: 7px;
+    }
+
+    .categoryOption {
+        font-size: 10.5px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .modalOverlay {
+        padding: 12px;
+    }
+
+    .addTodoCard {
+        width: 100%;
+
+        padding: 18px;
+
+        border-radius: 18px;
+
+        max-height: calc(100vh - 24px);
+        overflow-y: auto;
+    }
+
+    .modalHeader {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .modalIcon {
+        width: 36px;
+        height: 36px;
+
+        border-radius: 9px;
+
+        font-size: 16px;
+    }
+
+    .modalHeading h2 {
+        font-size: 18px;
+    }
+
+    .modalHeading p {
+        font-size: 11px;
+    }
+
+    .modalClose {
+        width: 28px;
+        height: 28px;
+    }
+
+    .modalField {
+        margin-bottom: 15px;
+    }
+
+    .modalField label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .modalInput {
+        height: 44px;
+        padding: 0 11px;
+    }
+
+    .modalInput input {
+        font-size: 12px;
+    }
+
+    .categoryOptions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    .categoryOption {
+        height: 36px;
+        font-size: 11px;
+    }
+
+    .modalFooter {
+        margin-top: 20px;
+        gap: 6px;
+    }
+
+    .skipBtn,
+    .editBtn,
+    .addTodoBtn {
+        height: 38px;
+
+        padding: 0 13px;
+
+        font-size: 12px;
+    }
+
+    .addTodoBtn {
+        padding: 0 15px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .addTodoCard {
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .modalHeader {
+        gap: 9px;
+    }
+
+    .modalIcon {
+        width: 33px;
+        height: 33px;
+        font-size: 14px;
+    }
+
+    .modalHeading h2 {
+        font-size: 16px;
+    }
+
+    .modalHeading p {
+        font-size: 10px;
+    }
+
+    .categoryOptions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .categoryOption {
+        height: 34px;
+        font-size: 10px;
+    }
+
+    .modalFooter {
+        justify-content: stretch;
+    }
+
+    .skipBtn,
+    .editBtn,
+    .addTodoBtn {
+        flex: 1;
+        padding: 0 8px;
+        font-size: 11px;
+    }
+}
+
+/* =========================
+   CATEGORY BUTTON COLORS
+========================= */
+
+/* Work */
+.categoryOption:nth-child(1) {
+    background: rgba(59, 130, 246, 0.10);
+    color: #3b82f6;
+}
+
+/* Personal */
+.categoryOption:nth-child(2) {
+    background: rgba(168, 85, 247, 0.10);
+    color: #a855f7;
+}
+
+/* Learning */
+.categoryOption:nth-child(3) {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+/* Health */
+.categoryOption:nth-child(4) {
+    background: rgba(239, 68, 68, 0.10);
+    color: #ef4444;
+}
+
+/* Finance */
+.categoryOption:nth-child(5) {
+    background: rgba(34, 197, 94, 0.10);
+    color: #22c55e;
+}
+
+/* General */
+.categoryOption:nth-child(6) {
+    background: rgba(100, 116, 139, 0.10);
+    color: #64748b;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.categoryOption:nth-child(1):hover {
+    background: rgba(59, 130, 246, 0.18);
+}
+
+.categoryOption:nth-child(2):hover {
+    background: rgba(168, 85, 247, 0.18);
+}
+
+.categoryOption:nth-child(3):hover {
+    background: rgba(245, 158, 11, 0.20);
+}
+
+.categoryOption:nth-child(4):hover {
+    background: rgba(239, 68, 68, 0.18);
+}
+
+.categoryOption:nth-child(5):hover {
+    background: rgba(34, 197, 94, 0.18);
+}
+
+.categoryOption:nth-child(6):hover {
+    background: rgba(100, 116, 139, 0.18);
+}
+
+
+/* =========================
+   ACTIVE
+   Blue stays exactly like before
+========================= */
+
+.categoryOption.active {
+    background: var(--primary-soft-extra);
+    color: #fff !important;
+    border-color: var(--primary-soft-extra);
+    font-weight: 600;
+}
+
+.categoryOption.active:hover {
+    background: var(--primary-soft-extra);
+    color: #fff !important;
+}

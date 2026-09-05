@@ -1,0 +1,110 @@
+.errorAlert {
+  position: absolute;
+  bottom: 10%;
+  overflow: hidden;
+  min-width: 20%;
+  margin: auto;
+  width: fit-content;
+  min-height: 58px;
+  padding: 0 14px 0 18px;
+  z-index: 999;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: var(--alert-bg);
+  border: 1px solid var(--alert-border);
+  border-radius: 12px;
+
+  color: var(--alert-text);
+
+  box-shadow: var(--alert-shadow);
+
+  animation: alertIn 0.7s ease;
+}
+
+.errorAlertIcon {
+  flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--alert-icon);
+  font-size: 25px;
+}
+
+.errorAlertMessage {
+  flex: 1;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.alertProgress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  height: 3px;
+  width: 100%;
+
+  background: var(--alert-icon);
+
+  border-radius: 0 0 12px 12px;
+
+  transform-origin: left;
+  animation: alertProgress var(--alert-duration, 4s) linear forwards;
+}
+
+
+@keyframes alertProgress {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}
+
+
+.errorAlertClose {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid var(--alert-close-border);
+  border-radius: 8px;
+
+  background: var(--alert-close-bg);
+  color: var(--alert-close-text);
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.errorAlertClose:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+@keyframes alertIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

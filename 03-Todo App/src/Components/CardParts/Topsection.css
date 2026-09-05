@@ -1,0 +1,301 @@
+/* =========================
+   TOP SECTION
+========================= */
+
+.topSectionArea {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+    margin-top: 10px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   LEFT LOGO
+========================= */
+
+.lft {
+    height: 100%;
+
+    background-color: var(--primary);
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    padding: 10px;
+
+    transition: background-color 0.3s linear;
+
+    flex-shrink: 0;
+}
+
+.lft .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bg-secondary);
+
+    font-size: 35px;
+}
+
+.lft:hover {
+    background-color: var(--primary-hover);
+}
+
+
+/* =========================
+   CENTER TEXT
+========================= */
+
+.cent {
+    align-self: center;
+
+    flex: 1;
+    min-width: 0;
+
+    text-align: left;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.herotxt {
+    color: var(--text-primary);
+
+    margin: 0;
+}
+
+.des {
+    color: var(--text-secondary);
+
+    margin: 0;
+}
+
+
+/* =========================
+   RIGHT TOGGLE
+========================= */
+
+.rtl {
+    display: flex;
+
+    gap: 10px;
+
+    align-self: flex-end;
+
+    flex-shrink: 0;
+}
+
+.toogle {
+    background-color: var(--primary-soft);
+
+    padding: 10px;
+
+    font-size: 20px;
+
+    border-radius: 8px;
+
+    color: var(--text-primary);
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+.toogle:hover {
+    transform: translateY(-1px);
+}
+
+.actives {
+    background-color: var(--theme-active-bg);
+
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+    .topSectionArea {
+        gap: 14px;
+    }
+
+    .lft {
+        padding: 9px;
+    }
+
+    .lft .logo {
+        font-size: 30px;
+    }
+
+    .herotxt {
+        font-size: 21px;
+    }
+
+    .des {
+        font-size: 13px;
+    }
+
+    .rtl {
+        gap: 7px;
+    }
+
+    .toogle {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .topSectionArea {
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    .lft {
+        padding: 8px;
+
+        border-radius: 10px;
+    }
+
+    .lft .logo {
+        font-size: 26px;
+    }
+
+    .herotxt {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .des {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .rtl {
+        gap: 5px;
+    }
+
+    .toogle {
+        padding: 7px;
+
+        font-size: 16px;
+
+        border-radius: 7px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .topSectionArea {
+        gap: 8px;
+    }
+
+    .lft {
+        padding: 7px;
+    }
+
+    .lft .logo {
+        font-size: 23px;
+    }
+
+    .herotxt {
+        font-size: 16px;
+    }
+
+    .des {
+        font-size: 10px;
+    }
+
+    .toogle {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+.todoCategory {
+    flex-shrink: 0;
+
+    margin-left: 14px;
+    padding: 6px 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.4s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================
+   CATEGORY COLORS
+========================= */
+
+.category-work {
+    background-color: rgba(59, 130, 246, 0.12);
+    color: #3b82f6;
+}
+
+.category-personal {
+    background-color: rgba(168, 85, 247, 0.12);
+    color: #a855f7;
+}
+
+.category-learning {
+    background-color: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+.category-health {
+    background-color: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+.category-finance {
+    background-color: rgba(34, 197, 94, 0.12);
+    color: #22c55e;
+}
+
+.category-general {
+    background-color: rgba(100, 116, 139, 0.12);
+    color: #64748b;
+}
+
+.list.completed .todoCategory {
+    opacity: 0.65;
+}

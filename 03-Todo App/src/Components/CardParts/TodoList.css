@@ -1,0 +1,412 @@
+.list {
+    height: auto;
+    width: 100%;
+
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--border);
+
+    display: flex;
+    align-items: flex-start;
+
+    padding: 12px 20px;
+    box-sizing: border-box;
+
+    transition:
+        opacity 0.4s ease,
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   TODO CHECKBOX
+========================= */
+
+.todoCheck {
+    flex-shrink: 0;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+    margin-top: 1px;
+
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-secondary);
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.todoCheck:hover {
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+.todoCheck.active {
+    color: var(--success);
+    transform: scale(1.02);
+}
+
+.todoCheck.active:hover {
+    color: var(--success);
+}
+
+
+/* =========================
+   TODO TITLE
+========================= */
+
+.todoTitle {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+
+    margin-left: 16px;
+
+    color: var(--text-primary);
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    transition:
+        opacity 0.5s ease,
+        color 0.5s ease,
+        text-decoration-color 0.5s ease;
+}
+
+
+/* Completed title */
+
+.list.completed .todoTitle {
+    opacity: 0.5;
+
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: currentColor;
+}
+
+
+/* =========================
+   CATEGORY CHIP
+========================= */
+
+.todoCategory {
+    flex-shrink: 0;
+
+    margin-left: 14px;
+    margin-top: 2px;
+
+    padding: 6px 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.4s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================
+   CATEGORY COLORS
+========================= */
+
+.category-work {
+    background-color: rgba(59, 130, 246, 0.12);
+    color: #3b82f6;
+}
+
+.category-personal {
+    background-color: rgba(168, 85, 247, 0.12);
+    color: #a855f7;
+}
+
+.category-learning {
+    background-color: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+.category-health {
+    background-color: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+.category-finance {
+    background-color: rgba(34, 197, 94, 0.12);
+    color: #22c55e;
+}
+
+.category-general {
+    background-color: rgba(100, 116, 139, 0.12);
+    color: #64748b;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.todoActions {
+    flex-shrink: 0;
+
+    margin-left: auto;
+    margin-top: 2px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.todoActions button {
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-secondary);
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.todoActions button:hover {
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+.todoEdit:disabled {
+    opacity: 0.2;
+
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.todoDelete {
+    color: var(--text-secondary);
+}
+
+.list.completed .todoDelete {
+    color: var(--danger);
+
+    opacity: 1;
+    transform: scale(1.08);
+
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.list.completed .todoDelete:hover {
+    color: var(--danger);
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   COMPLETED TODO
+========================= */
+
+.list.completed {
+    opacity: 1;
+}
+
+
+/* =========================
+   LIST HOVER
+========================= */
+
+.list:hover {
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+    .list {
+        padding: 12px 16px;
+    }
+
+    .todoTitle {
+        font-size: 16px;
+    }
+
+    .todoActions {
+        gap: 12px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .list {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .todoCheck {
+        width: 26px;
+        height: 26px;
+        font-size: 23px;
+    }
+
+    .todoTitle {
+        margin-left: 6px;
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .todoCategory {
+        margin-left: 4px;
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .todoActions {
+        margin-left: 4px;
+        gap: 7px;
+    }
+
+    .todoActions button {
+        width: 26px;
+        height: 26px;
+        font-size: 17px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+    .list {
+        padding: 11px 10px;
+        gap: 6px;
+    }
+
+    .todoCheck {
+        width: 24px;
+        height: 24px;
+        font-size: 21px;
+    }
+
+    .todoTitle {
+        margin-left: 4px;
+        font-size: 14px;
+    }
+
+    .todoCategory {
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+
+    .todoActions {
+        gap: 5px;
+    }
+
+    .todoActions button {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .list {
+        padding: 10px 8px;
+    }
+
+    .todoTitle {
+        font-size: 13px;
+    }
+
+    .todoCategory {
+        font-size: 10px;
+        padding: 4px 5px;
+    }
+
+    .todoActions {
+        gap: 3px;
+    }
+
+    .todoActions button {
+        width: 22px;
+        height: 22px;
+        font-size: 15px;
+    }
+}
+
