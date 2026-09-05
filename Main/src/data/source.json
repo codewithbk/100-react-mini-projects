@@ -26,8 +26,8 @@
     "para": "Tasks add, complete aur delete karne wala todo app, jisme data Local Storage me persist hota hai.",
     "difficulty": "medium",
     "tags": ["React", "useState", "useEffect", "Local Storage", "CRUD"],
-    "liveLink": "https://username.github.io/100-react-mini-projects/todo-app",
-    "githubLink": "https://github.com/username/100-react-mini-projects/tree/main/03-todo-app"
+    "liveLink": "https://03-todo-app.vercel.app/",
+    "githubLink": "https://github.com/codewithbk/100-react-mini-projects/tree/main/03-Todo%20App"
   },
   {
     "id": 4,
