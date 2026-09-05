@@ -182,7 +182,7 @@
 
   box-shadow: var(--shadow-md);
 
-  z-index: 100;
+  z-index: 9999;
 }
 
 
